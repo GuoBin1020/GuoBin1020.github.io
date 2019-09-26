@@ -1,0 +1,1262 @@
+<!DOCTYPE html>
+
+
+
+
+
+
+
+
+
+
+
+
+  
+
+
+<html class="theme-next mist use-motion" lang="zh-CN">
+<head><meta name="generator" content="Hexo 3.9.0">
+  <meta charset="UTF-8">
+<meta http-equiv="X-UA-Compatible" content="IE=edge">
+<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=2">
+<meta name="theme-color" content="#222">
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<link rel="stylesheet" href="/lib/font-awesome/css/font-awesome.min.css?v=4.6.2">
+
+<link rel="stylesheet" href="/css/main.css?v=7.0.1">
+
+
+  <link rel="apple-touch-icon" sizes="180x180" href="/images/apple-touch-icon-next.png?v=7.0.1">
+
+
+  <link rel="icon" type="image/png" sizes="32x32" href="/images/icons/favicon-32x32-stguo.ico?v=7.0.1">
+
+
+  <link rel="icon" type="image/png" sizes="16x16" href="/images/icons/favicon-16x16-stguo.ico?v=7.0.1">
+
+
+  <link rel="mask-icon" href="/images/logo.svg?v=7.0.1" color="#222">
+
+
+
+
+
+
+
+<script id="hexo.configurations">
+  var NexT = window.NexT || {};
+  var CONFIG = {
+    root: '/',
+    scheme: 'Mist',
+    version: '7.0.1',
+    sidebar: {"position":"left","display":"post","offset":12,"b2t":false,"scrollpercent":true,"onmobile":false,"dimmer":false},
+    fancybox: false,
+    fastclick: false,
+    lazyload: false,
+    tabs: true,
+    motion: {"enable":true,"async":false,"transition":{"post_block":"fadeIn","post_header":"slideDownIn","post_body":"slideDownIn","coll_header":"slideLeftIn","sidebar":"slideUpIn"}},
+    algolia: {
+      applicationID: '',
+      apiKey: '',
+      indexName: '',
+      hits: {"per_page":10},
+      labels: {"input_placeholder":"Search for Posts","hits_empty":"We didn't find any results for the search: ${query}","hits_stats":"${hits} results found in ${time} ms"}
+    }
+  };
+</script>
+
+
+  
+
+
+
+
+  <meta name="description" content="个人博客搭建好了之后怎么让它变的更加美观？使用markdown语法编写文章轻松克服排版问题。">
+<meta name="keywords" content="hexo,hexo-themes-next,markdown">
+<meta property="og:type" content="article">
+<meta property="og:title" content="hexo主题的更换和文章编写">
+<meta property="og:url" content="https://www.stguo.top/2019/03/05/hexo主题的更换和文章编写/index.html">
+<meta property="og:site_name" content="咸鱼郭">
+<meta property="og:description" content="个人博客搭建好了之后怎么让它变的更加美观？使用markdown语法编写文章轻松克服排版问题。">
+<meta property="og:locale" content="zh-CN">
+<meta property="og:image" content="https://s2.ax1x.com/2019/03/14/AAPFP0.png">
+<meta property="og:image" content="https://s2.ax1x.com/2019/03/14/AAJhz8.png">
+<meta property="og:image" content="https://ss0.bdstatic.com/70cFvHSh_Q1YnxGkpoWK1HF6hhy/it/
+u=702257389,1274025419&fm=27&gp=0.jpg">
+<meta property="og:updated_time" content="2019-08-28T09:00:39.019Z">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:title" content="hexo主题的更换和文章编写">
+<meta name="twitter:description" content="个人博客搭建好了之后怎么让它变的更加美观？使用markdown语法编写文章轻松克服排版问题。">
+<meta name="twitter:image" content="https://s2.ax1x.com/2019/03/14/AAPFP0.png">
+
+
+
+  <link rel="alternate" href="/rss.xml" title="咸鱼郭" type="application/atom+xml">
+
+
+
+
+  <link rel="canonical" href="https://www.stguo.top/2019/03/05/hexo主题的更换和文章编写/">
+
+
+
+<script id="page.configurations">
+  CONFIG.page = {
+    sidebar: "",
+  };
+</script>
+
+  <title>hexo主题的更换和文章编写 | 咸鱼郭</title>
+  
+
+
+
+
+
+
+
+
+
+
+
+
+  <noscript>
+  <style>
+  .use-motion .motion-element,
+  .use-motion .brand,
+  .use-motion .menu-item,
+  .sidebar-inner,
+  .use-motion .post-block,
+  .use-motion .pagination,
+  .use-motion .comments,
+  .use-motion .post-header,
+  .use-motion .post-body,
+  .use-motion .collection-title { opacity: initial; }
+
+  .use-motion .logo,
+  .use-motion .site-title,
+  .use-motion .site-subtitle {
+    opacity: initial;
+    top: initial;
+  }
+
+  .use-motion .logo-line-before i { left: initial; }
+  .use-motion .logo-line-after i { right: initial; }
+  </style>
+</noscript>
+
+  <!-- 页面点击小红心 -->
+	<script type="text/javascript" src="/js/src/love.js"></script>
+</head>
+
+<body itemscope itemtype="http://schema.org/WebPage" lang="zh-CN">
+
+  
+  
+    
+  
+
+  <div class="container sidebar-position-left page-post-detail">
+    <div class="headband"></div>
+
+	<!-- 添加顶部github图标，NexT 6.0已经支持配置 -->
+	<!-- <a href="https://github.com/stguo2018" class="github-corner" aria-label="View source on GitHub" target="_blank"><svg width="80" height="80" viewBox="0 0 250 250" style="fill:#151513; color:#fff; position: absolute; top: 0; border: 0; right: 0;" aria-hidden="true"><path d="M0,0 L115,115 L130,115 L142,142 L250,250 L250,0 Z"></path><path d="M128.3,109.0 C113.8,99.7 119.0,89.6 119.0,89.6 C122.0,82.7 120.5,78.6 120.5,78.6 C119.2,72.0 123.4,76.3 123.4,76.3 C127.3,80.9 125.5,87.3 125.5,87.3 C122.9,97.6 130.6,101.9 134.4,103.2" fill="currentColor" style="transform-origin: 130px 106px;" class="octo-arm"></path><path d="M115.0,115.0 C114.9,115.1 118.7,116.5 119.8,115.4 L133.7,101.6 C136.9,99.2 139.9,98.4 142.2,98.6 C133.8,88.0 127.5,74.4 143.8,58.0 C148.5,53.4 154.0,51.2 159.7,51.0 C160.3,49.4 163.2,43.6 171.4,40.1 C171.4,40.1 176.1,42.5 178.8,56.2 C183.1,58.6 187.2,61.8 190.9,65.4 C194.5,69.0 197.7,73.2 200.1,77.6 C213.8,80.2 216.3,84.9 216.3,84.9 C212.7,93.1 206.9,96.0 205.4,96.6 C205.1,102.4 203.0,107.8 198.3,112.5 C181.9,128.9 168.3,122.5 157.7,114.1 C157.9,116.9 156.7,120.9 152.7,124.9 L141.0,136.5 C139.8,137.7 141.6,141.9 141.8,141.8 Z" fill="currentColor" class="octo-body"></path></svg></a><style>.github-corner:hover .octo-arm{animation:octocat-wave 560ms ease-in-out}@keyframes octocat-wave{0%,100%{transform:rotate(0)}20%,60%{transform:rotate(-25deg)}40%,80%{transform:rotate(10deg)}}@media (max-width:500px){.github-corner:hover .octo-arm{animation:none}.github-corner .octo-arm{animation:octocat-wave 560ms ease-in-out}}</style> -->
+
+    <header id="header" class="header" itemscope itemtype="http://schema.org/WPHeader">
+      <div class="header-inner"><div class="site-brand-wrapper">
+  <div class="site-meta">
+    
+
+    <div class="custom-logo-site-title">
+      <a href="/" class="brand" rel="start">
+        <span class="logo-line-before"><i></i></span>
+        <span class="site-title">咸鱼郭</span>
+        <span class="logo-line-after"><i></i></span>
+      </a>
+    </div>
+    
+      
+        <h1 class="site-subtitle" itemprop="description">咸鱼咸鱼郭</h1>
+      
+    
+    
+  </div>
+
+  <div class="site-nav-toggle">
+    <button aria-label="切换导航栏">
+      <span class="btn-bar"></span>
+      <span class="btn-bar"></span>
+      <span class="btn-bar"></span>
+    </button>
+  </div>
+</div>
+
+
+
+<nav class="site-nav">
+  
+    <ul id="menu" class="menu">
+      
+        
+        
+        
+          
+          <li class="menu-item menu-item-home">
+
+    
+    
+    
+      
+    
+
+    
+
+    <a href="/" rel="section"><i class="menu-item-icon fa fa-fw fa-home"></i> <br>首页</a>
+
+  </li>
+        
+        
+        
+          
+          <li class="menu-item menu-item-about">
+
+    
+    
+    
+      
+    
+
+    
+
+    <a href="/about/" rel="section"><i class="menu-item-icon fa fa-fw fa-user"></i> <br>关于</a>
+
+  </li>
+        
+        
+        
+          
+          <li class="menu-item menu-item-tags">
+
+    
+    
+    
+      
+    
+
+    
+
+    <a href="/tags/" rel="section"><i class="menu-item-icon fa fa-fw fa-tags"></i> <br>标签</a>
+
+  </li>
+        
+        
+        
+          
+          <li class="menu-item menu-item-categories">
+
+    
+    
+    
+      
+    
+
+    
+
+    <a href="/categories/" rel="section"><i class="menu-item-icon fa fa-fw fa-th"></i> <br>分类</a>
+
+  </li>
+        
+        
+        
+          
+          <li class="menu-item menu-item-archives">
+
+    
+    
+    
+      
+    
+
+    
+
+    <a href="/archives/" rel="section"><i class="menu-item-icon fa fa-fw fa-archive"></i> <br>归档</a>
+
+  </li>
+        
+        
+        
+          
+          <li class="menu-item menu-item-commonweal">
+
+    
+    
+    
+      
+    
+
+    
+
+    <a href="/404/" rel="section"><i class="menu-item-icon fa fa-fw fa-heartbeat"></i> <br>公益 404</a>
+
+  </li>
+
+      
+      
+    </ul>
+  
+
+  
+    
+
+  
+
+  
+</nav>
+
+
+
+  
+
+
+
+</div>
+    </header>
+
+    
+  
+  
+  
+  
+
+  
+
+  <a href="https://github.com/GuoBin1020" class="github-corner" title="Follow me on GitHub" aria-label="Follow me on GitHub" rel="noopener" target="_blank"><svg width="80" height="80" viewbox="0 0 250 250" style="fill: #222; color: #fff; position: absolute; top: 0; border: 0; right: 0;" aria-hidden="true"><path d="M0,0 L115,115 L130,115 L142,142 L250,250 L250,0 Z"/><path d="M128.3,109.0 C113.8,99.7 119.0,89.6 119.0,89.6 C122.0,82.7 120.5,78.6 120.5,78.6 C119.2,72.0 123.4,76.3 123.4,76.3 C127.3,80.9 125.5,87.3 125.5,87.3 C122.9,97.6 130.6,101.9 134.4,103.2" fill="currentColor" style="transform-origin: 130px 106px;" class="octo-arm"/><path d="M115.0,115.0 C114.9,115.1 118.7,116.5 119.8,115.4 L133.7,101.6 C136.9,99.2 139.9,98.4 142.2,98.6 C133.8,88.0 127.5,74.4 143.8,58.0 C148.5,53.4 154.0,51.2 159.7,51.0 C160.3,49.4 163.2,43.6 171.4,40.1 C171.4,40.1 176.1,42.5 178.8,56.2 C183.1,58.6 187.2,61.8 190.9,65.4 C194.5,69.0 197.7,73.2 200.1,77.6 C213.8,80.2 216.3,84.9 216.3,84.9 C212.7,93.1 206.9,96.0 205.4,96.6 C205.1,102.4 203.0,107.8 198.3,112.5 C181.9,128.9 168.3,122.5 157.7,114.1 C157.9,116.9 156.7,120.9 152.7,124.9 L141.0,136.5 C139.8,137.7 141.6,141.9 141.8,141.8 Z" fill="currentColor" class="octo-body"/></svg></a>
+
+
+
+    <main id="main" class="main">
+      <div class="main-inner">
+        <div class="content-wrap">
+          
+          <div id="content" class="content">
+            
+
+  <div id="posts" class="posts-expand">
+    
+
+  
+
+  
+  
+  
+
+  
+
+  <article class="post post-type-normal" itemscope itemtype="http://schema.org/Article">
+  
+  
+  
+  <div class="post-block">
+    <link itemprop="mainEntityOfPage" href="https://www.stguo.top/2019/03/05/hexo主题的更换和文章编写/">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="name" content="咸鱼郭">
+      <meta itemprop="description" content="记录学习的过程。">
+      <meta itemprop="image" content="/images/avatar/stguo.png">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="咸鱼郭">
+    </span>
+
+    
+      <header class="post-header">
+
+        
+        
+          <h2 class="post-title" itemprop="name headline">hexo主题的更换和文章编写
+
+              
+            
+          </h2>
+        
+
+        <div class="post-meta">
+          <span class="post-time">
+
+            
+            
+            
+
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-calendar-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">发表于</span>
+              
+
+              
+                
+              
+
+              <time title="创建时间：2019-03-05 13:47:07" itemprop="dateCreated datePublished" datetime="2019-03-05T13:47:07+08:00">2019-03-05</time>
+            
+
+            
+              
+
+              
+                
+                <span class="post-meta-divider">|</span>
+                
+
+                <span class="post-meta-item-icon">
+                  <i class="fa fa-calendar-check-o"></i>
+                </span>
+                
+                  <span class="post-meta-item-text">更新于</span>
+                
+                <time title="修改时间：2019-08-28 17:00:39" itemprop="dateModified" datetime="2019-08-28T17:00:39+08:00">2019-08-28</time>
+              
+            
+          </span>
+
+          
+            <span class="post-category">
+            
+              <span class="post-meta-divider">|</span>
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-folder-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">分类于</span>
+              
+              
+                <span itemprop="about" itemscope itemtype="http://schema.org/Thing"><a href="/categories/博客搭建/" itemprop="url" rel="index"><span itemprop="name">博客搭建</span></a></span>
+
+                
+                
+              
+            </span>
+          
+
+          
+            
+            
+              
+              <span class="post-comments-count">
+                <span class="post-meta-divider">|</span>
+                <span class="post-meta-item-icon">
+                  <i class="fa fa-comment-o"></i>
+                </span>
+            
+                <span class="post-meta-item-text">评论数：</span>
+                <a href="/2019/03/05/hexo主题的更换和文章编写/#comments" itemprop="discussionUrl">
+                  <span class="post-comments-count valine-comment-count" data-xid="/2019/03/05/hexo主题的更换和文章编写/" itemprop="commentCount"></span>
+                </a>
+              </span>
+            
+          
+
+          
+          
+            <span id="/2019/03/05/hexo主题的更换和文章编写/" class="leancloud_visitors" data-flag-title="hexo主题的更换和文章编写">
+              <span class="post-meta-divider">|</span>
+              <span class="post-meta-item-icon">
+                <i class="fa fa-eye"></i>
+              </span>
+              
+                <span class="post-meta-item-text">热度：</span>
+              
+                <span class="leancloud-visitors-count"></span>
+				<span>℃</span>
+            </span>
+          
+
+          
+
+          
+
+          
+            <div class="post-description">个人博客搭建好了之后怎么让它变的更加美观？使用markdown语法编写文章轻松克服排版问题。</div>
+          
+
+        </div>
+      </header>
+    
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody">
+
+      
+      
+
+      
+        <h1 id="前言"><a href="#前言" class="headerlink" title="前言"></a>前言</h1><p>使用hexo+github pages成功的搭建了一个简单的个人博客，那么，怎么让这个站点更加的美观，功能更加的强大呢？答案就是换一个强大的主题。hexo-themes-next这个主题是一个非常热门的主题，本文将更换主题的过程记录下来，方便日后参考。同时记录一些简单的markdown语法。</p>
+<h1 id="准备工作"><a href="#准备工作" class="headerlink" title="准备工作"></a>准备工作</h1><ul>
+<li>安装git for windows，或者其他git客户端，<a href="https://git-scm.com/download" target="_blank" rel="noopener">git for windows下载</a>，本文使用git for windows版本为2.21.0。</li>
+<li>markdown编写工具，在线的也行，比如<a href="http://soft.xiaoshujiang.com/" target="_blank" rel="noopener">小书匠</a></li>
+</ul>
+<h1 id="主题更换"><a href="#主题更换" class="headerlink" title="主题更换"></a>主题更换</h1><p>首先我们来到我们的网站根目录，就是当初创建的根目录，右键鼠标找到Git Bash Here打开命令窗口，不知到怎么使用的请看<a href="/2019/03/01/使用hexo-github-pages-搭建自己的博客/">这里</a>，输入下面的命令：<br><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">git <span class="built_in">clone</span> https://github.com/theme-next/hexo-theme-next.git themes/next</span><br></pre></td></tr></table></figure></p>
+<p>完成之后我们可以在目录<font color="red">/themes</font>目录下看到<font color="red">next</font>目录，这个就是主题了。<br>接下来我们就需要去根目录的配置文件<font color="red">_config.yml</font>里面修改相关的配置了。<br>打开文件我们找到<font color="red">theme: landscape</font>，修改为<code>theme: next</code>，这样就将主题修改完成了，接下来我们敲入命令部署一下看下效果：<br><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">hexo s -g</span><br></pre></td></tr></table></figure></p>
+<p>我们可以看到，一个简洁大方的博客主页就好了：<br><img src="https://s2.ax1x.com/2019/03/14/AAPFP0.png" alt="主页1"></p>
+<h1 id="文章编写"><a href="#文章编写" class="headerlink" title="文章编写"></a>文章编写</h1><p>接下来我们就要去进行文章的创建和编写了，我们敲入下面的命令：<br><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">hexo new <span class="string">'文章名称'</span></span><br></pre></td></tr></table></figure></p>
+<p>然后我们可以在<font color="red">/source/_posts</font>目录下看到生成的对应的md文件，这就是我们后面要编辑的内容，使用Markdown语法编写。</p>
+<h2 id="初始生成的md文件介绍"><a href="#初始生成的md文件介绍" class="headerlink" title="初始生成的md文件介绍"></a>初始生成的md文件介绍</h2><p>刚生成的文件我们可以看到头部的形式为：<br><figure class="highlight markdown"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line"></span><br><span class="line">---</span><br><span class="line">title: 文章名称</span><br><span class="line">date: 2019-03-05 13:47:07</span><br><span class="line">---</span><br></pre></td></tr></table></figure></p>
+<p>我们还可以添加一些其他的，比如：<br><figure class="highlight markdown"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br></pre></td><td class="code"><pre><span class="line"></span><br><span class="line">---</span><br><span class="line">title: 文章名称</span><br><span class="line">date: 2019-03-05 13:47:07</span><br><span class="line">categories: </span><br><span class="line"><span class="bullet">    - </span>这个是分类</span><br><span class="line"><span class="bullet">    - </span>写在下面比如这个位置表示是分类的下一级</span><br><span class="line"><span class="bullet">    - </span>继续表示是上面的分类的下一级</span><br><span class="line">tags: </span><br><span class="line"><span class="bullet">    - </span>tag没有层级关系</span><br><span class="line"><span class="bullet">    - </span>无论写多少个它们都是并列的</span><br><span class="line"><span class="bullet">    - </span>tag</span><br><span class="line">---</span><br></pre></td></tr></table></figure></p>
+<p>如果还没有页面，那么可以通过<code>hexo new page about,  hexo new page tag</code>等命令来创建页面,然后在页面头部加上<code>type: about</code>这种。</p>
+<hr>
+<h2 id="Markdown基本语法"><a href="#Markdown基本语法" class="headerlink" title="Markdown基本语法"></a>Markdown基本语法</h2><h3 id="标题"><a href="#标题" class="headerlink" title="标题"></a>标题</h3><p>在标题文字前面加“#”号就能标记标题，1个“#”号就是一级标题，2个就是二级标题，最多六级标题。<br><figure class="highlight markdown"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line"><span class="section"># 一级标题</span></span><br><span class="line"><span class="section">## 二级标题</span></span><br><span class="line"><span class="section">### 三级标题</span></span><br><span class="line"><span class="section">#### 四级标题</span></span><br><span class="line"><span class="section">##### 五级标题</span></span><br><span class="line"><span class="section">###### 六级标题</span></span><br></pre></td></tr></table></figure></p>
+<p>效果：<br><img src="https://s2.ax1x.com/2019/03/14/AAJhz8.png" alt="标题效果"></p>
+<hr>
+<h3 id="斜体加粗删除线"><a href="#斜体加粗删除线" class="headerlink" title="斜体加粗删除线"></a>斜体加粗删除线</h3><p>使用“*”去进行斜体、加粗、斜体加粗，使用“~~”加删除线。<br><figure class="highlight markdown"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line"><span class="emphasis">*斜体*</span></span><br><span class="line"><span class="strong">**加粗**</span></span><br><span class="line"><span class="strong">***斜体加粗**</span>*</span><br><span class="line">~~删除线~~</span><br></pre></td></tr></table></figure></p>
+<p>效果：</p>
+<p><em>斜体</em><br><strong>加粗</strong><br><strong><em>斜体加粗</em></strong><br><del>删除线</del></p>
+<hr>
+<h3 id="引用"><a href="#引用" class="headerlink" title="引用"></a>引用</h3><p>使用“&gt;”符号进行引用，数量决定层级。<br><figure class="highlight markdown"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><span class="line">第一级</span><br><span class="line"><span class="quote">&gt; 引用第一级</span></span><br><span class="line"><span class="quote">&gt; 引用第一级</span></span><br><span class="line">&gt;&gt; 引用第二级</span><br><span class="line"><span class="quote">&gt; 引用第一级</span></span><br><span class="line">&gt;&gt; 引用第二级</span><br><span class="line">&gt;&gt;&gt; 引用第三级</span><br></pre></td></tr></table></figure></p>
+<p>效果：</p>
+<p>第一级</p>
+<blockquote>
+<p>引用第一级<br>引用第一级</p>
+<blockquote>
+<p>引用第二级<br>引用第一级<br>引用第二级</p>
+<blockquote>
+<p>引用第三级</p>
+</blockquote>
+</blockquote>
+</blockquote>
+<hr>
+<h3 id="分割线"><a href="#分割线" class="headerlink" title="分割线"></a>分割线</h3><p>3或者3个以上的“-”或者“*”都可以。<br><figure class="highlight markdown"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line"></span><br><span class="line">---</span><br><span class="line">----</span><br><span class="line"><span class="emphasis">***</span></span><br><span class="line"><span class="emphasis">***</span>*</span><br></pre></td></tr></table></figure></p>
+<p>效果：</p>
+<hr>
+<hr>
+<hr>
+<hr>
+<hr>
+<h3 id="图片"><a href="#图片" class="headerlink" title="图片"></a>图片</h3><p>语法：<br><figure class="highlight markdown"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">![<span class="string">图片alt</span>](<span class="link">图片地址 "图片title"</span>)</span><br></pre></td></tr></table></figure></p>
+<p>示例：<br><img src="https://ss0.bdstatic.com/70cFvHSh_Q1YnxGkpoWK1HF6hhy/it/
+u=702257389,1274025419&amp;fm=27&amp;gp=0.jpg" alt="blockchain" title="区块链"></p>
+<hr>
+<h3 id="超链接"><a href="#超链接" class="headerlink" title="超链接"></a>超链接</h3><p>语法：<br><figure class="highlight markdown"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">[<span class="string">超链接名</span>](<span class="link">超链接地址 "超链接title"</span>)</span><br><span class="line">title可加可不加</span><br></pre></td></tr></table></figure></p>
+<p>示例：<br><a href="www.baidu.com" title="百度一下，你就知道">百度</a></p>
+<hr>
+<h3 id="列表"><a href="#列表" class="headerlink" title="列表"></a>列表</h3><h4 id="无序列表"><a href="#无序列表" class="headerlink" title="无序列表"></a>无序列表</h4><p>语法：<br>无序列表使用“-”、“+”、“*”任何一种都可以：<br><figure class="highlight markdown"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line"><span class="bullet">- </span>列表</span><br><span class="line"><span class="bullet">+ </span>列表</span><br><span class="line"><span class="bullet">* </span>列表</span><br><span class="line">注意：“-”、“+”、“*”跟内容之间都要有一个空格</span><br></pre></td></tr></table></figure></p>
+<p>示例：</p>
+<ul>
+<li>列表</li>
+</ul>
+<ul>
+<li>列表</li>
+</ul>
+<ul>
+<li>列表</li>
+</ul>
+<hr>
+<h4 id="有序列表"><a href="#有序列表" class="headerlink" title="有序列表"></a>有序列表</h4><p>语法：<br>数字加点<br><figure class="highlight markdown"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line"><span class="bullet">1. </span>列表</span><br><span class="line"><span class="bullet">2. </span>列表</span><br><span class="line"><span class="bullet">3. </span>列表</span><br><span class="line">注意：序号跟内容之间要有空格</span><br></pre></td></tr></table></figure></p>
+<p>示例：</p>
+<ol>
+<li>列表</li>
+<li>列表</li>
+<li>列表</li>
+</ol>
+<hr>
+<h4 id="列表嵌套"><a href="#列表嵌套" class="headerlink" title="列表嵌套"></a>列表嵌套</h4><p>语法： 下一级较上一级缩进三个空格即可<br><figure class="highlight markdown"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br></pre></td><td class="code"><pre><span class="line"><span class="bullet">+ </span>一级无序列表内容</span><br><span class="line"><span class="bullet">   + </span>二级无序列表内容</span><br><span class="line"><span class="bullet">   + </span>二级无序列表内容</span><br><span class="line"><span class="bullet">   + </span>二级无序列表内容</span><br><span class="line"><span class="bullet">+ </span>一级无序列表内容</span><br><span class="line"><span class="bullet">   1. </span>二级有序列表内容</span><br><span class="line"><span class="bullet">   2. </span>二级有序列表内容</span><br><span class="line"><span class="bullet">   3. </span>二级有序列表内容</span><br><span class="line"><span class="bullet">1. </span>一级有序列表内容</span><br><span class="line"><span class="bullet">   + </span>二级无序列表内容</span><br><span class="line"><span class="bullet">   + </span>二级无序列表内容</span><br><span class="line"><span class="bullet">   + </span>二级无序列表内容</span><br><span class="line"><span class="bullet">2. </span>一级有序列表内容</span><br><span class="line"><span class="bullet">   1. </span>二级有序列表内容</span><br><span class="line"><span class="bullet">   2. </span>二级有序列表内容</span><br><span class="line"><span class="bullet">   3. </span>二级有序列表内容</span><br></pre></td></tr></table></figure></p>
+<p>示例：</p>
+<ul>
+<li>一级无序列表内容<ul>
+<li>二级无序列表内容</li>
+<li>二级无序列表内容</li>
+<li>二级无序列表内容</li>
+</ul>
+</li>
+<li>一级无序列表内容<ol>
+<li>二级有序列表内容</li>
+<li>二级有序列表内容</li>
+<li>二级有序列表内容</li>
+</ol>
+</li>
+</ul>
+<ol>
+<li>一级有序列表内容<ul>
+<li>二级无序列表内容</li>
+<li>二级无序列表内容</li>
+<li>二级无序列表内容</li>
+</ul>
+</li>
+<li>一级有序列表内容<ol>
+<li>二级有序列表内容</li>
+<li>二级有序列表内容</li>
+<li>二级有序列表内容</li>
+</ol>
+</li>
+</ol>
+<hr>
+<h3 id="表格"><a href="#表格" class="headerlink" title="表格"></a>表格</h3><p>语法：<br><figure class="highlight markdown"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br></pre></td><td class="code"><pre><span class="line">|表头|表头|表头|表头|</span><br><span class="line">|---|:---|---:|:---:|</span><br><span class="line">|内容|内容|内容|内容|</span><br><span class="line">|内容|内容|内容|内容|</span><br><span class="line"></span><br><span class="line">第二行分割表头和内容</span><br><span class="line">“-”有一个就好了，写多个只不过是为了对齐</span><br><span class="line">文字默认左对齐</span><br><span class="line">“-”两边加“:”表示文字居中</span><br><span class="line">“-”左边加“:”表示左对齐</span><br><span class="line">“-”右边加“:”表示右对齐</span><br></pre></td></tr></table></figure></p>
+<p>示例：</p>
+<table>
+<thead>
+<tr>
+<th>姓名</th>
+<th style="text-align:left">性别</th>
+<th style="text-align:right">年龄</th>
+<th style="text-align:center">职业</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>张三</td>
+<td style="text-align:left">男</td>
+<td style="text-align:right">23</td>
+<td style="text-align:center">经理</td>
+</tr>
+<tr>
+<td>李四</td>
+<td style="text-align:left">男</td>
+<td style="text-align:right">34</td>
+<td style="text-align:center">厨师</td>
+</tr>
+<tr>
+<td>李翠花</td>
+<td style="text-align:left">女</td>
+<td style="text-align:right">26</td>
+<td style="text-align:center">服务员</td>
+</tr>
+</tbody>
+</table>
+<hr>
+<h3 id="代码块"><a href="#代码块" class="headerlink" title="代码块"></a>代码块</h3><p>语法：<br>单行代码：<br><figure class="highlight markdown"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="code">`代码内容`</span></span><br></pre></td></tr></table></figure></p>
+<p>代码块：<br><figure class="highlight markdown"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line">(<span class="code">```)</span></span><br><span class="line"><span class="code">代码...</span></span><br><span class="line"><span class="code">代码...</span></span><br><span class="line"><span class="code">代码...</span></span><br><span class="line"><span class="code">(```)</span></span><br><span class="line"><span class="code">三个反引号来表示代码块，使用括号包起来是为了防止被转义，其实是不需要括号的。</span></span><br></pre></td></tr></table></figure></p>
+<p>示例：<br>单行代码：<br><code>hext s -g</code><br>代码块：<br><figure class="highlight markdown"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line">(<span class="code">```)</span></span><br><span class="line"><span class="code">function fun()&#123;</span></span><br><span class="line"><span class="code">     alert("这是一句非常牛逼的代码");</span></span><br><span class="line"><span class="code">&#125;</span></span><br><span class="line"><span class="code">fun();</span></span><br><span class="line"><span class="code">(```)</span></span><br></pre></td></tr></table></figure></p>
+<p>效果如下：<br>单行代码：<code>hext s -g</code><br>代码块：<br><figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line"><span class="function"><span class="keyword">function</span> <span class="title">fun</span>(<span class="params"></span>)</span>&#123;</span><br><span class="line">     alert(<span class="string">"这是一句非常牛逼的代码"</span>);</span><br><span class="line">&#125;</span><br><span class="line">fun();</span><br></pre></td></tr></table></figure></p>
+<p>好了，更换hexo主题和怎么使用Markdown语法编写文章简单的介绍就到这里了，如果有什么问题的话或者文章哪些地方写的不好的欢迎在下方评论提出批评指正，我有时间就会更改，这次只是粗略的介绍到怎么更换主题，更多的比如hexo本身的一些配置，hexo-next主题的一些配置，访问量的统计，评论系统的添加什么的后续可能会继续更新。</p>
+<h1 id="本文引用"><a href="#本文引用" class="headerlink" title="本文引用"></a>本文引用</h1><p><a href="http://jeffyang.top/Hexo/Hexo%E4%B8%BB%E9%A2%98Next%E7%BE%8E%E5%8C%96/" target="_blank" rel="noopener">Hexo主题next美化</a><br><a href="http://liadbiz.github.io/better-hexo-blog/" target="_blank" rel="noopener">基于hexo的next主题博客完善攻略</a><br><a href="http://theme-next.iissnan.com/" target="_blank" rel="noopener">next使用文档(这个是5.0.X版本的，建议可以先看一遍，然后再看新版本的迁移文档)</a><br><a href="https://iassas.com/archives/d6a90b9.html" target="_blank" rel="noopener">Blog更新&amp;配置文件详解</a><br><a href="https://www.jianshu.com/p/191d1e21f7ed" target="_blank" rel="noopener">Markdown基本语法</a><br><a href="https://www.jianshu.com/p/2e318226c88d" target="_blank" rel="noopener">使用Hexo+Next主题搭建自己的个人博客</a></p>
+
+      
+      <div>
+        
+          <div>
+    
+        <div style="text-align:center;color: #636363;font-size:14px;letter-spacing: 10px">本文结束啦<i class="fa fa-bell"></i>感谢您的阅读</div>
+    
+</div>
+
+        
+      </div>
+    </div>
+
+    
+      
+
+  <div class="popular-posts-header">相关文章</div>
+  <ul class="popular-posts">
+  
+    <li class="popular-posts-item">
+      
+      
+      <div class="popular-posts-title"><a href="\2019\08\26\为博客引入阅读次数统计和评论\" rel="bookmark">为博客引入阅读次数统计和评论</a></div>
+      
+    </li>
+  
+    <li class="popular-posts-item">
+      
+      
+      <div class="popular-posts-title"><a href="\2019\03\01\使用hexo-github-pages-搭建自己的博客\" rel="bookmark">使用hexo+github pages 搭建自己的博客</a></div>
+      
+    </li>
+  
+  </ul>
+
+
+    
+
+    
+    
+    
+
+    
+
+    
+      
+    
+    
+      <div>
+        <div style="padding: 10px 0; margin: 20px auto; width: 90%; text-align: center;">
+  <div>坚持原创技术分享，您的支持将鼓励我继续创作！</div>
+  <button id="rewardButton" disable="enable" onclick="var qr = document.getElementById(&quot;QR&quot;); if (qr.style.display === 'none') {qr.style.display='block';} else {qr.style.display='none'}">
+    <span>打赏</span>
+  </button>
+  <div id="QR" style="display: none;">
+
+    
+      <div id="wechat" style="display: inline-block">
+        <img id="wechat_qr" src="/images/reward/wechatpay.png" alt="咸鱼郭 微信支付">
+        <p>微信支付</p>
+      </div>
+    
+
+    
+      <div id="alipay" style="display: inline-block">
+        <img id="alipay_qr" src="/images/reward/alipay.jpg" alt="咸鱼郭 支付宝">
+        <p>支付宝</p>
+      </div>
+    
+
+    
+
+  </div>
+</div>
+
+      </div>
+    
+
+    
+
+    <footer class="post-footer">
+      
+        <div class="post-tags">
+          
+            <a href="/tags/hexo/" rel="tag"><i class="fa fa-tag"></i> hexo</a>
+          
+            <a href="/tags/hexo-themes-next/" rel="tag"><i class="fa fa-tag"></i> hexo-themes-next</a>
+          
+            <a href="/tags/markdown/" rel="tag"><i class="fa fa-tag"></i> markdown</a>
+          
+        </div>
+      
+
+      
+      
+      
+
+      
+        <div class="post-nav">
+          <div class="post-nav-next post-nav-item">
+            
+              <a href="/2019/03/01/使用hexo-github-pages-搭建自己的博客/" rel="next" title="使用hexo+github pages 搭建自己的博客">
+                <i class="fa fa-chevron-left"></i> 使用hexo+github pages 搭建自己的博客
+              </a>
+            
+          </div>
+
+          <span class="post-nav-divider"></span>
+
+          <div class="post-nav-prev post-nav-item">
+            
+              <a href="/2019/08/26/为博客引入阅读次数统计和评论/" rel="prev" title="为博客引入阅读次数统计和评论">
+                为博客引入阅读次数统计和评论 <i class="fa fa-chevron-right"></i>
+              </a>
+            
+          </div>
+        </div>
+      
+
+      
+      
+    </footer>
+  </div>
+  
+  
+  
+  </article>
+
+
+  </div>
+
+
+          </div>
+          
+
+  
+    <div class="comments" id="comments">
+    </div>
+
+  
+
+
+
+        </div>
+        
+          
+  
+  <div class="sidebar-toggle">
+    <div class="sidebar-toggle-line-wrap">
+      <span class="sidebar-toggle-line sidebar-toggle-line-first"></span>
+      <span class="sidebar-toggle-line sidebar-toggle-line-middle"></span>
+      <span class="sidebar-toggle-line sidebar-toggle-line-last"></span>
+    </div>
+  </div>
+
+  <aside id="sidebar" class="sidebar">
+    <div class="sidebar-inner">
+
+      
+
+      
+        <ul class="sidebar-nav motion-element">
+          <li class="sidebar-nav-toc sidebar-nav-active" data-target="post-toc-wrap">
+            文章目录
+          </li>
+          <li class="sidebar-nav-overview" data-target="site-overview-wrap">
+            站点概览
+          </li>
+        </ul>
+      
+
+      <div class="site-overview-wrap sidebar-panel">
+        <div class="site-overview">
+          <div class="site-author motion-element" itemprop="author" itemscope itemtype="http://schema.org/Person">
+            
+              <img class="site-author-image" itemprop="image" src="/images/avatar/stguo.png" alt="咸鱼郭">
+            
+              <p class="site-author-name" itemprop="name">咸鱼郭</p>
+              <p class="site-description motion-element" itemprop="description">记录学习的过程。</p>
+          </div>
+
+          
+            <nav class="site-state motion-element">
+              
+                <div class="site-state-item site-state-posts">
+                
+                  <a href="/archives/">
+                
+                    <span class="site-state-item-count">3</span>
+                    <span class="site-state-item-name">日志</span>
+                  </a>
+                </div>
+              
+
+              
+                
+                
+                <div class="site-state-item site-state-categories">
+                  <a href="/categories/index.html">
+                    
+                    
+                      
+                    
+                    <span class="site-state-item-count">1</span>
+                    <span class="site-state-item-name">分类</span>
+                  </a>
+                </div>
+              
+
+              
+                
+                
+                <div class="site-state-item site-state-tags">
+                  <a href="/tags/index.html">
+                    
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                    <span class="site-state-item-count">7</span>
+                    <span class="site-state-item-name">标签</span>
+                  </a>
+                </div>
+              
+            </nav>
+          
+
+          
+            <div class="feed-link motion-element">
+              <a href="/rss.xml" rel="alternate">
+                <i class="fa fa-rss"></i>
+                RSS
+              </a>
+            </div>
+          
+
+          
+            <div class="links-of-author motion-element">
+              
+                <span class="links-of-author-item">
+                  
+                  
+                    
+                  
+                  
+                    
+                  
+                  <a href="https://github.com/GuoBin1020" title="GitHub &rarr; https://github.com/GuoBin1020" rel="noopener" target="_blank"><i class="fa fa-fw fa-github"></i>GitHub</a>
+                </span>
+              
+                <span class="links-of-author-item">
+                  
+                  
+                    
+                  
+                  
+                    
+                  
+                  <a href="mailto:steven.bin.guo@gmail.com" title="E-Mail &rarr; mailto:steven.bin.guo@gmail.com" rel="noopener" target="_blank"><i class="fa fa-fw fa-envelope"></i>E-Mail</a>
+                </span>
+              
+            </div>
+          
+
+          
+
+          
+          
+            <div class="links-of-blogroll motion-element links-of-blogroll-block">
+              <div class="links-of-blogroll-title">
+                <i class="fa  fa-fw fa-link"></i>
+                Links
+              </div>
+              <ul class="links-of-blogroll-list">
+                
+                  <li class="links-of-blogroll-item">
+                    <a href="https://www.baidu.com" title="https://www.baidu.com" rel="noopener" target="_blank">Baidu</a>
+                  </li>
+                
+              </ul>
+            </div>
+          
+
+          
+            
+          
+          
+
+        </div>
+      </div>
+
+      
+      <!--noindex-->
+        <div class="post-toc-wrap motion-element sidebar-panel sidebar-panel-active">
+          <div class="post-toc">
+
+            
+            
+            
+            
+
+            
+              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-1"><a class="nav-link" href="#前言"><span class="nav-number">1.</span> <span class="nav-text">前言</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#准备工作"><span class="nav-number">2.</span> <span class="nav-text">准备工作</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#主题更换"><span class="nav-number">3.</span> <span class="nav-text">主题更换</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#文章编写"><span class="nav-number">4.</span> <span class="nav-text">文章编写</span></a><ol class="nav-child"><li class="nav-item nav-level-2"><a class="nav-link" href="#初始生成的md文件介绍"><span class="nav-number">4.1.</span> <span class="nav-text">初始生成的md文件介绍</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#Markdown基本语法"><span class="nav-number">4.2.</span> <span class="nav-text">Markdown基本语法</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#标题"><span class="nav-number">4.2.1.</span> <span class="nav-text">标题</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#斜体加粗删除线"><span class="nav-number">4.2.2.</span> <span class="nav-text">斜体加粗删除线</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#引用"><span class="nav-number">4.2.3.</span> <span class="nav-text">引用</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#分割线"><span class="nav-number">4.2.4.</span> <span class="nav-text">分割线</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#图片"><span class="nav-number">4.2.5.</span> <span class="nav-text">图片</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#超链接"><span class="nav-number">4.2.6.</span> <span class="nav-text">超链接</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#列表"><span class="nav-number">4.2.7.</span> <span class="nav-text">列表</span></a><ol class="nav-child"><li class="nav-item nav-level-4"><a class="nav-link" href="#无序列表"><span class="nav-number">4.2.7.1.</span> <span class="nav-text">无序列表</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#有序列表"><span class="nav-number">4.2.7.2.</span> <span class="nav-text">有序列表</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#列表嵌套"><span class="nav-number">4.2.7.3.</span> <span class="nav-text">列表嵌套</span></a></li></ol></li><li class="nav-item nav-level-3"><a class="nav-link" href="#表格"><span class="nav-number">4.2.8.</span> <span class="nav-text">表格</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#代码块"><span class="nav-number">4.2.9.</span> <span class="nav-text">代码块</span></a></li></ol></li></ol></li><li class="nav-item nav-level-1"><a class="nav-link" href="#本文引用"><span class="nav-number">5.</span> <span class="nav-text">本文引用</span></a></li></ol></div>
+            
+
+          </div>
+        </div>
+      <!--/noindex-->
+      
+
+      
+
+    </div>
+  </aside>
+  
+
+
+        
+      </div>
+    </main>
+
+    <footer id="footer" class="footer">
+      <div class="footer-inner">
+        <div class="copyright">&copy; <span itemprop="copyrightYear">2019</span>
+  <span class="with-love" id="animate">
+    <i class="fa fa-user"></i>
+  </span>
+  <span class="author" itemprop="copyrightHolder">咸鱼郭</span>
+
+  
+
+  
+</div>
+
+
+
+
+
+
+
+
+
+        
+
+
+
+
+
+
+
+
+        
+      </div>
+    </footer>
+
+    
+      <div class="back-to-top">
+        <i class="fa fa-arrow-up"></i>
+        
+          <span id="scrollpercent"><span>0</span>%</span>
+        
+      </div>
+    
+
+    
+
+    
+
+    
+  </div>
+
+  
+
+<script>
+  if (Object.prototype.toString.call(window.Promise) !== '[object Function]') {
+    window.Promise = null;
+  }
+</script>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+  
+  <script src="/lib/jquery/index.js?v=2.1.3"></script>
+
+  
+  <script src="/lib/velocity/velocity.min.js?v=1.2.1"></script>
+
+  
+  <script src="/lib/velocity/velocity.ui.min.js?v=1.2.1"></script>
+
+
+  
+
+
+  <script src="/js/src/utils.js?v=7.0.1"></script>
+
+  <script src="/js/src/motion.js?v=7.0.1"></script>
+
+
+
+  
+  
+
+
+  <script src="/js/src/schemes/muse.js?v=7.0.1"></script>
+
+
+
+
+  
+  <script src="/js/src/scrollspy.js?v=7.0.1"></script>
+<script src="/js/src/post-details.js?v=7.0.1"></script>
+
+
+
+  
+
+
+  <script src="/js/src/bootstrap.js?v=7.0.1"></script>
+
+
+  
+  
+  
+
+<script src="//cdn1.lncld.net/static/js/3.11.1/av-min.js"></script>
+
+
+
+<script src="//unpkg.com/valine/dist/Valine.min.js"></script>
+
+<script>
+  var GUEST = ['nick', 'mail', 'link'];
+  var guest = 'nick,mail,link';
+  guest = guest.split(',').filter(function(item) {
+    return GUEST.indexOf(item) > -1;
+  });
+  new Valine({
+    el: '#comments',
+    verify: false,
+    notify: false,
+    appId: '0g5MpRDs5h9MxtGU5jIQkTXY-MdYXbMMI',
+    appKey: 'Rhy64V3l0nN9xs4nLyUpYKnA',
+    placeholder: '来说点啥吧……',
+    avatar: 'mm',
+    meta: guest,
+    pageSize: '10' || 10,
+    visitor: true
+  });
+</script>
+
+
+
+
+  
+
+
+  
+
+
+
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+  <style>
+    .copy-btn {
+      display: inline-block;
+      padding: 6px 12px;
+      font-size: 13px;
+      font-weight: 700;
+      line-height: 20px;
+      color: #333;
+      white-space: nowrap;
+      vertical-align: middle;
+      cursor: pointer;
+      
+        background-color: #eee;
+        background-image: linear-gradient(#fcfcfc, #eee);
+        border: 1px solid #d5d5d5;
+        border-radius: 3px;
+      
+      user-select: none;
+      outline: 0;
+    }
+
+    .highlight-wrap .copy-btn {
+      transition: opacity .3s ease-in-out;
+      opacity: 0;
+      padding: 2px 6px;
+      position: absolute;
+      
+        right: 4px;
+        top: 8px;
+      
+    }
+
+    .highlight-wrap:hover .copy-btn,
+    .highlight-wrap .copy-btn:focus {
+      opacity: 1;
+    }
+
+    .highlight-wrap {
+      position: relative;
+    }
+  </style>
+  <script>
+    $('.highlight').each(function(i, e) {
+      var $wrap = $('<div>').addClass('highlight-wrap');
+      $(e).after($wrap);
+      $wrap.append($('<button>').addClass('copy-btn').append('复制').on('click', function(e) {
+        var code = $(this).parent().find('.code').find('.line').map(function(i, e) {
+          return $(e).text();
+        }).toArray().join('\n');
+        var ta = document.createElement('textarea');
+        var yPosition = window.pageYOffset || document.documentElement.scrollTop;
+        ta.style.top = yPosition + 'px'; // Prevent page scroll
+        ta.style.position = 'absolute';
+        ta.style.opacity = '0';
+        ta.readOnly = true;
+        ta.value = code;
+        document.body.appendChild(ta);
+        ta.select();
+        ta.setSelectionRange(0, code.length);
+        ta.readOnly = false;
+        var result = document.execCommand('copy');
+        
+          if (result) $(this).text('复制成功');
+          else $(this).text('复制失败');
+        
+        ta.blur(); // For iOS
+        $(this).blur();
+      })).on('mouseleave', function(e) {
+        var $b = $(this).find('.copy-btn');
+        setTimeout(function() {
+          $b.text('复制');
+        }, 300);
+      }).append(e);
+    })
+  </script>
+
+
+</body>
+</html>
